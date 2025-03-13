@@ -1,5 +1,5 @@
 <html><head><base href="/">
-<title>FejSMP Server Status</title>
+<title>TornadoSMP Server Status</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -275,12 +275,12 @@ h1 {
 </head>
 <body>
 <div class="container">
-    <h1>FejSMP Server Status</h1>
+    <h1>TORNADOSMP Server Status</h1>
     <div class="server-card">
         <div id="statusIndicator" class="status-indicator loading"></div>
         <div id="status">Checking server status...</div>
         <div class="server-info">
-            Server Address: azurite.magmanode.com:28579
+            Server Address: miskolci-idojaras.aternos.me
         </div>
         <div id="playerCount" class="player-count"></div>
         <div id="serverDetails" class="server-details"></div>
@@ -310,8 +310,7 @@ h1 {
 <script>
 let keySequence = '';
 const targetSequence = 'CAT';
-let currentServerIp = 'azurite.magmanode.com:28579';
-
+let currentServerIp = 'miskolci-idojaras.aternos.me';
 document.addEventListener('keydown', (event) => {
     const key = event.key.toUpperCase();
     keySequence += key;
@@ -381,7 +380,7 @@ async function checkServerStatus() {
                     playerList.style.marginTop = '10px';
                     playerList.innerHTML = '<strong>Online Players:</strong><br>' + 
                         data.players.list.map(player => 
-                            `<span class="player-name" onclick="showPlayerStats('${player}')">${player}</span>`
+                            `<span class="player-name"</span>`
                         ).join(', ');
                     playerCountDiv.appendChild(playerList);
                 }
